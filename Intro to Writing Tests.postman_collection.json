@@ -1119,6 +1119,70 @@
 							"body": "{\n    \"args\": {},\n    \"data\": \"\",\n    \"files\": {},\n    \"form\": {\n        \"customerName\": \"' or '1'='1\"\n    },\n    \"headers\": {\n        \"x-forwarded-proto\": \"https\",\n        \"host\": \"postman-echo.com\",\n        \"content-length\": \"38\",\n        \"accept\": \"*/*\",\n        \"accept-encoding\": \"gzip, deflate\",\n        \"cache-control\": \"no-cache\",\n        \"content-type\": \"application/x-www-form-urlencoded\",\n        \"cookie\": \"sails.sid=s%3A7tFj5KB_lujWMK1xoroPV_xSKkRDxR1W.qUauhME8lGY%2FnBlCT4iVRCs0badee7%2Fmen9XorL%2FJ4s\",\n        \"postman-token\": \"031152dc-59c7-4529-8f8a-29faf9f41afe\",\n        \"user-agent\": \"PostmanRuntime/7.3.0\",\n        \"x-forwarded-port\": \"443\"\n    },\n    \"json\": {\n        \"customerName\": \"' or '1'='1\"\n    },\n    \"url\": \"https://postman-echo.com/post\"\n}"
 						}
 					]
+				},
+				{
+					"name": "https://postman-echo.com/get?foo1=bar1&foo2=bar2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response should be 200 OK\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"Status code name should have an OK string\", function () {",
+									"    pm.response.to.have.status(\"OK\");",
+									"});",
+									"var jsonData = pm.response.json();",
+									"console.log(jsonData.args)",
+									"console.log(jsonData.headers.host)",
+									"",
+									"",
+									"",
+									"",
+									"",
+									"",
+									"",
+									"pm.test(\"confirm that args has a value of bar1\", function () {",
+									"    pm.expect(jsonData.args.foo1).to.eql(\"bar1\");",
+									"});",
+									"",
+									"pm.test(\"confirm that body contains host\", function () {",
+									"    pm.expect(jsonData.headers.host).to.include(\"postman-echo.com\");",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://postman-echo.com/get?foo1=bar1&foo2=bar2",
+							"protocol": "https",
+							"host": [
+								"postman-echo",
+								"com"
+							],
+							"path": [
+								"get"
+							],
+							"query": [
+								{
+									"key": "foo1",
+									"value": "bar1"
+								},
+								{
+									"key": "foo2",
+									"value": "bar2"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"description": "This folder contains examples of testing a single HTTP API request.\n\nIn the Postman app, under the \"Tests\" tab for each request, notice the test(s) written to validate specific assertions. Some of these tests are available as a \"Snippet\" on the right sidebar.\n\nSend each request to see the results under the \"Test Results\" tab in the response viewer.",
