@@ -1,0 +1,404 @@
+{
+	"id": "6cd57bf9-ba31-4b22-97de-353d2139749f",
+	"name": "Intro to Writing Tests",
+	"timestamp": "2024-05-09T14:01:13.459Z",
+	"collection_id": "34737960-3cad5dbe-d93c-42b2-856b-edebfe6081fe",
+	"folder_id": 0,
+	"environment_id": "34737960-fc98faba-6398-4c88-944d-badc8668f20a",
+	"totalPass": 22,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-05-09T14:01:10.302Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "dd3ec6b1-b3ee-45eb-89ce-59f2b508a9c3",
+			"name": "pm.test",
+			"url": "https://postman-echo.com/get?foo1=bar1&foo2=bar2",
+			"time": 143,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Name of the first test": true,
+				"Name of the second test": true
+			},
+			"testPassFailCounts": {
+				"Name of the first test": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Name of the second test": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				143
+			],
+			"allTests": [
+				{
+					"Name of the first test": true,
+					"Name of the second test": true
+				}
+			]
+		},
+		{
+			"id": "3fc5471b-434a-4b56-acff-be675108fedf",
+			"name": "pm.expect and pm.response",
+			"url": "https://postman-echo.com/get?foo1=bar1&foo2=bar2",
+			"time": 145,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200 - pm.response": true,
+				"Status code is 200 - pm.expect": true,
+				"Status code body should contain OK": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200 - pm.response": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200 - pm.expect": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code body should contain OK": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				145
+			],
+			"allTests": [
+				{
+					"Status code is 200 - pm.response": true,
+					"Status code is 200 - pm.expect": true,
+					"Status code body should contain OK": true
+				}
+			]
+		},
+		{
+			"id": "dd525ce9-1644-48cc-bf5a-b1ffa40acdf2",
+			"name": "Status",
+			"url": "https://postman-echo.com/get?foo1=bar1&foo2=bar2",
+			"time": 150,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"response should be 200 OK": true,
+				"Status code name should have an OK string": true
+			},
+			"testPassFailCounts": {
+				"response should be 200 OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name should have an OK string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				150
+			],
+			"allTests": [
+				{
+					"response should be 200 OK": true,
+					"Status code name should have an OK string": true
+				}
+			]
+		},
+		{
+			"id": "26b055b7-4a71-4495-a8e2-01c5289cb443",
+			"name": "Performance",
+			"url": "https://postman-echo.com/put",
+			"time": 143,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response time is less than 200ms": true
+			},
+			"testPassFailCounts": {
+				"Response time is less than 200ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				143
+			],
+			"allTests": [
+				{
+					"Response time is less than 200ms": true
+				}
+			]
+		},
+		{
+			"id": "10c57b7e-9e9b-4c48-a38c-a9a16ed19557",
+			"name": "Data type",
+			"url": "https://postman-echo.com/patch",
+			"time": 144,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type is present": true,
+				"Content-Type is JSON": true
+			},
+			"testPassFailCounts": {
+				"Content-Type is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is JSON": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				144
+			],
+			"allTests": [
+				{
+					"Content-Type is present": true,
+					"Content-Type is JSON": true
+				}
+			]
+		},
+		{
+			"id": "a89262f7-4d21-403b-894b-bdde401aec62",
+			"name": "Functional",
+			"url": "https://postman-echo.com/post",
+			"time": 168,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Returns 7 char alphanumeric id": true,
+				"Returns 15 char alhpanumeric id": true
+			},
+			"testPassFailCounts": {
+				"Returns 7 char alphanumeric id": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Returns 15 char alhpanumeric id": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				168
+			],
+			"allTests": [
+				{
+					"Returns 7 char alphanumeric id": true,
+					"Returns 15 char alhpanumeric id": true
+				}
+			]
+		},
+		{
+			"id": "077cc18a-b451-44e5-8fec-4fe9b39bb2d3",
+			"name": "Functional2",
+			"url": "https://postman-echo.com/delete",
+			"time": 147,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"response is ok": true,
+				"Response should be a parsable JSON": true,
+				"Response body should be an object": true,
+				"Response body should be in the correct format": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response should be a parsable JSON": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body should be an object": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response body should be in the correct format": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				147
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"Response should be a parsable JSON": true,
+					"Response body should be an object": true,
+					"Response body should be in the correct format": true
+				}
+			]
+		},
+		{
+			"id": "dad6cf54-a377-41af-8e18-fda82e2a7053",
+			"name": "JSON schema v4 validation",
+			"url": "https://postman-echo.com/get?foo1=bar1&foo2=bar2",
+			"time": 162,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Schema is valid": true
+			},
+			"testPassFailCounts": {
+				"Schema is valid": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				162
+			],
+			"allTests": [
+				{
+					"Schema is valid": true
+				}
+			]
+		},
+		{
+			"id": "503a76bb-9960-4e33-9214-5981a62474c3",
+			"name": "SQL injection security check",
+			"url": "https://postman-echo.com/post",
+			"time": 157,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Does not return password": true
+			},
+			"testPassFailCounts": {
+				"Does not return password": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				157
+			],
+			"allTests": [
+				{
+					"Does not return password": true
+				}
+			]
+		},
+		{
+			"id": "d3e2a712-afbf-41a7-9f11-b21b3a6f60a7",
+			"name": "https://postman-echo.com/get?foo1=bar1&foo2=bar2",
+			"url": "https://postman-echo.com/get?foo1=bar1&foo2=bar2",
+			"time": 145,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"response should be 200 OK": true,
+				"Status code name should have an OK string": true,
+				"confirm that args has a value of bar1": true,
+				"confirm that body contains host": true
+			},
+			"testPassFailCounts": {
+				"response should be 200 OK": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name should have an OK string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"confirm that args has a value of bar1": {
+					"pass": 1,
+					"fail": 0
+				},
+				"confirm that body contains host": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				145
+			],
+			"allTests": [
+				{
+					"response should be 200 OK": true,
+					"Status code name should have an OK string": true,
+					"confirm that args has a value of bar1": true,
+					"confirm that body contains host": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1504,
+	"collection": {
+		"requests": [
+			{
+				"id": "dd3ec6b1-b3ee-45eb-89ce-59f2b508a9c3",
+				"method": "GET"
+			},
+			{
+				"id": "3fc5471b-434a-4b56-acff-be675108fedf",
+				"method": "GET"
+			},
+			{
+				"id": "dd525ce9-1644-48cc-bf5a-b1ffa40acdf2",
+				"method": "GET"
+			},
+			{
+				"id": "26b055b7-4a71-4495-a8e2-01c5289cb443",
+				"method": "PUT"
+			},
+			{
+				"id": "10c57b7e-9e9b-4c48-a38c-a9a16ed19557",
+				"method": "PATCH"
+			},
+			{
+				"id": "a89262f7-4d21-403b-894b-bdde401aec62",
+				"method": "POST"
+			},
+			{
+				"id": "077cc18a-b451-44e5-8fec-4fe9b39bb2d3",
+				"method": "DELETE"
+			},
+			{
+				"id": "dad6cf54-a377-41af-8e18-fda82e2a7053",
+				"method": "GET"
+			},
+			{
+				"id": "503a76bb-9960-4e33-9214-5981a62474c3",
+				"method": "POST"
+			},
+			{
+				"id": "d3e2a712-afbf-41a7-9f11-b21b3a6f60a7",
+				"method": "GET"
+			}
+		]
+	}
+}
