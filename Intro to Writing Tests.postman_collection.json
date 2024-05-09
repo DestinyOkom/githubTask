@@ -1138,6 +1138,7 @@
 									"console.log(jsonData.args)",
 									"console.log(jsonData.headers.host)",
 									"",
+									"pm.environment.set(\"host\", \"jsonData.headers.host\");",
 									"",
 									"",
 									"",
@@ -1161,11 +1162,9 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://postman-echo.com/get?foo1=bar1&foo2=bar2",
-							"protocol": "https",
+							"raw": "{{baseUrl}}/get?foo1=bar1&foo2=bar2",
 							"host": [
-								"postman-echo",
-								"com"
+								"{{baseUrl}}"
 							],
 							"path": [
 								"get"
